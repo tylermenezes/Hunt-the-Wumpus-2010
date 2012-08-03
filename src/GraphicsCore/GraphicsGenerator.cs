@@ -59,7 +59,7 @@ namespace HuntTheWumpus.GraphicsCore
                         }
                         else
                         {
-                            col[x + y * w] = Color.TransparentBlack;
+                            col[x + y * w] = Color.Black;
                         }
                     }
                 }
@@ -67,7 +67,7 @@ namespace HuntTheWumpus.GraphicsCore
 
             var sb = (SpriteBatch)(Globals.Variables["SpriteBatch"]);
             var dev = (GraphicsDevice)(Globals.Variables["GraphicsDevice"]);
-            Texture2D tex = new Texture2D(dev, w, h, 1, TextureUsage.None, SurfaceFormat.Color);
+            Texture2D tex = new Texture2D(dev, w, h, false, SurfaceFormat.Color);
             tex.SetData<Color>(col);
             
             /*MemoryStream texStream = new MemoryStream();

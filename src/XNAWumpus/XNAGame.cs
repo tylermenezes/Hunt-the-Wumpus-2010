@@ -39,7 +39,7 @@ namespace HuntTheWumpus.XNAWumpus
         {
             graphics = new GraphicsDeviceManager(this);
             Content.RootDirectory = "Content";
-            this.Exiting += new EventHandler(XNAGame_Exiting);
+            this.Exiting += new EventHandler<EventArgs>(XNAGame_Exiting);
         }
 
         void XNAGame_Exiting(object sender, EventArgs e)

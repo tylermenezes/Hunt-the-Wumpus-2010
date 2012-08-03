@@ -32,7 +32,7 @@ namespace HuntTheWumpus.GameEngineCore
         {
             frames++;
 
-            elapsedTime += time.ElapsedRealTime;
+            elapsedTime += time.ElapsedGameTime;
             if (elapsedTime > TimeSpan.FromSeconds(1))
             {
                 elapsedTime -= TimeSpan.FromSeconds(1);
