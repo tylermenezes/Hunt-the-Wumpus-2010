@@ -1,0 +1,132 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="3.5" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.21022</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{376C13A9-A10F-40A5-8516-996FA4A12757}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>HuntTheWumpus.GameEngineCore</RootNamespace>
+    <AssemblyName>GameEngineCore</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Xna.Framework, Version=3.1.0.0, Culture=neutral, PublicKeyToken=6d5c3888ef60e27d, processorArchitecture=x86" />
+    <Reference Include="Microsoft.Xna.Framework.Game, Version=3.1.0.0, Culture=neutral, PublicKeyToken=6d5c3888ef60e27d, processorArchitecture=x86" />
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ActorGroup.cs" />
+    <Compile Include="Actors\Proportional\Block.cs" />
+    <Compile Include="Actors\Proportional\FixedBlock.cs" />
+    <Compile Include="Editor\FileIO.cs" />
+    <Compile Include="Actor.cs" />
+    <Compile Include="Editor\EditorConsole.cs" />
+    <Compile Include="Frames\LoadGameMenuFrame.cs" />
+    <Compile Include="Frames\OptionsMenuFrame.cs" />
+    <Compile Include="Frames\PauseMenuFrame.cs" />
+    <Compile Include="Frames\UserProfileFrame.cs" />
+    <Compile Include="Actors\Scalable\Bouncer.cs" />
+    <Compile Include="Actors\Scalable\MovablePlatform.cs" />
+    <Compile Include="Actors\Scalable\Platform.cs" />
+    <Compile Include="Actors\Proportional\PhysicsHat.cs" />
+    <Compile Include="Editor\StandardObjects.cs" />
+    <Compile Include="Frames\HighScoreFrame.cs" />
+    <Compile Include="Frames\InstructionsMenuFrame.cs" />
+    <Compile Include="Frames\MainMenuFrame.cs" />
+    <Compile Include="GameStates\FlashBackState.cs" />
+    <Compile Include="GameStates\MainMenuState.cs" />
+    <Compile Include="GameStates\PauseMenuState.cs" />
+    <Compile Include="HighScoreManager.cs" />
+    <Compile Include="PhysicsWeapons\FlameBall.cs" />
+    <Compile Include="PhysicsWeapons\PhysicsWeaponManager.cs" />
+    <Compile Include="PhysicsWeapons\IPhysicsWeapon.cs" />
+    <Compile Include="PhysicsWeapons\GravityGrenade.cs" />
+    <Compile Include="Editor\EditorEngine.cs" />
+    <Compile Include="Editor\Tile.cs" />
+    <Compile Include="GameStates\ConsoleState.cs" />
+    <Compile Include="ILinked.cs" />
+    <Compile Include="Actors\Proportional\IntraMapPortal.cs" />
+    <Compile Include="Actors\Proportional\InterMapPortal.cs" />
+    <Compile Include="Actors\Scalable\Floor.cs" />
+    <Compile Include="Actors\Proportional\Player.cs" />
+    <Compile Include="ActorState.cs" />
+    <Compile Include="GameState.cs" />
+    <Compile Include="GameControler.cs" />
+    <Compile Include="GameEngine.cs" />
+    <Compile Include="GameStates\EditorState.cs" />
+    <Compile Include="GameStates\PhysicsDemoState.cs" />
+    <Compile Include="Actors\Proportional\Portal.cs" />
+    <Compile Include="GameStates\IPlayable.cs" />
+    <Compile Include="GameStates\TheGameState.cs" />
+    <Compile Include="Actors\IDynamic.cs" />
+    <Compile Include="Map.cs" />
+    <Compile Include="PhysicsWeapons\PhysicsWeaponDeployers.cs" />
+    <Compile Include="PlayerProfile.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\GraphicsCore\GraphicsCore.csproj">
+      <Project>{04177822-B20A-42C1-BB4B-3BDA9C875547}</Project>
+      <Name>GraphicsCore</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\PhysicsCore\PhysicsCore.csproj">
+      <Project>{EDD79CD2-590C-4744-AE23-B73ECC2A55DC}</Project>
+      <Name>PhysicsCore</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SoundCore\SoundCore.csproj">
+      <Project>{EE230A9D-0B98-4331-BEB8-5B069E10A1A6}</Project>
+      <Name>SoundCore</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\UICore\UICore.csproj">
+      <Project>{2D7366D8-C1C3-4829-9170-B15278BA5FF4}</Project>
+      <Name>UICore</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Utilities\Utilities.csproj">
+      <Project>{1996884C-48A2-439E-B3DB-80103FEEB3D9}</Project>
+      <Name>Utilities</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
