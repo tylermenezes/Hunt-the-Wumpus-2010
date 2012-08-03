@@ -15,6 +15,7 @@ The following people are to blame:
  * Paul Cretu - Dev
  * Pramod Chavali - Dev
  * Adam Ryman - Dev
+ * Jan Horstman - Dev & Audio
  * Cole Estes - Art
  * Dalton Broback - Voice
  * Keith Roper - Voice
